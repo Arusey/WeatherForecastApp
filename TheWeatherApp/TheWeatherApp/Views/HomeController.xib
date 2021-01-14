@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="17701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="17703"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="HomeController" customModule="TheWeatherApp" customModuleProvider="target">
+            <connections>
+                <outlet property="addCityBtn" destination="KEm-We-x7c" id="IYN-eF-GdE"/>
+                <outlet property="appInfo" destination="lmf-AA-1Rv" id="vUS-wC-h6e"/>
+                <outlet property="searchBar" destination="CJw-Rb-PZH" id="fgI-4a-Jc4"/>
+                <outlet property="tableView" destination="UKs-MN-WVq" id="UVX-tr-8fV"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="908"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="x9E-mp-kcx">
+                    <rect key="frame" x="0.0" y="44" width="414" height="864"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" translatesAutoresizingMaskIntoConstraints="NO" id="Yak-TX-7B0">
+                            <rect key="frame" x="0.0" y="0.0" width="414" height="30"/>
+                            <subviews>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="KEm-We-x7c">
+                                    <rect key="frame" x="0.0" y="0.0" width="207" height="30"/>
+                                    <color key="backgroundColor" systemColor="systemBlueColor"/>
+                                    <state key="normal" title="Add City">
+                                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </state>
+                                </button>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="lmf-AA-1Rv">
+                                    <rect key="frame" x="207" y="0.0" width="207" height="30"/>
+                                    <state key="normal" title="App Info"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bPk-c2-9Fw">
+                            <rect key="frame" x="0.0" y="40" width="414" height="56"/>
+                            <subviews>
+                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="CJw-Rb-PZH">
+                                    <rect key="frame" x="0.0" y="0.0" width="414" height="56"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </searchBar>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            <constraints>
+                                <constraint firstItem="CJw-Rb-PZH" firstAttribute="width" secondItem="bPk-c2-9Fw" secondAttribute="width" id="3la-9G-92n"/>
+                                <constraint firstItem="CJw-Rb-PZH" firstAttribute="height" secondItem="bPk-c2-9Fw" secondAttribute="height" id="7Q2-XB-hWo"/>
+                                <constraint firstItem="CJw-Rb-PZH" firstAttribute="centerX" secondItem="bPk-c2-9Fw" secondAttribute="centerX" id="Ylw-pV-tDH"/>
+                                <constraint firstItem="CJw-Rb-PZH" firstAttribute="centerY" secondItem="bPk-c2-9Fw" secondAttribute="centerY" id="iHN-FR-Rhd"/>
+                            </constraints>
+                        </view>
+                        <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="lps-zX-hNq">
+                            <rect key="frame" x="0.0" y="106" width="414" height="758"/>
+                            <subviews>
+                                <tableView clipsSubviews="YES" contentMode="scaleToFill" fixedFrame="YES" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="UKs-MN-WVq">
+                                    <rect key="frame" x="0.0" y="8" width="414" height="727"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                </tableView>
+                            </subviews>
+                            <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                        </view>
+                    </subviews>
+                </stackView>
+            </subviews>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+            <constraints>
+                <constraint firstItem="x9E-mp-kcx" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="GWd-De-z9S"/>
+                <constraint firstItem="x9E-mp-kcx" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" id="KPt-ek-9zF"/>
+                <constraint firstAttribute="bottom" secondItem="x9E-mp-kcx" secondAttribute="bottom" id="lcs-KI-I0w"/>
+                <constraint firstItem="x9E-mp-kcx" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="q9U-RQ-32p"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <point key="canvasLocation" x="140.57971014492756" y="152.67857142857142"/>
+        </view>
+    </objects>
+    <resources>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemBlueColor">
+            <color red="0.0" green="0.47843137254901963" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+        </systemColor>
+    </resources>
+</document>
